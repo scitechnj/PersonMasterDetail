@@ -1,0 +1,13 @@
+﻿@model PersonMasterDetail.Models.AllPersonsViewModel
+
+@{
+    ViewBag.Title = "All People";
+}
+
+<h1>All People</h1>
+<ul>
+    @foreach (var person in Model.People)
+    {
+        <li>@person.FirstName - @person.LastName <a href="/home/show?id=@person.Id">Show</a></li>
+    }
+</ul>
